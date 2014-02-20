@@ -5,8 +5,8 @@ LRESULT (WINAPI * TrueSendMessageW)(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM l
 
 __declspec(dllexport) LRESULT WINAPI MySendMessageW(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)
 {
-	if (Msg == WM_SETTEXT && wcsstr((LPCTSTR)lParam, L"Хабрахабр") != NULL)
-		return TrueSendMessageW(hWnd, Msg, wParam, (LPARAM)L"Привет, Хабр!");
+	if (Msg == WM_SETTEXT && wcsstr((LPCTSTR)lParam, L"РҐР°Р±СЂР°С…Р°Р±СЂ"NULL)
+		return TrueSendMessageW(hWnd, Msg, wParam, (LPARAM)L"РџСЂРёРІРµС‚, РҐР°Р±СЂ!");
 
 	return TrueSendMessageW(hWnd, Msg, wParam, lParam);
 }
